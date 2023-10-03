@@ -29,21 +29,21 @@ services:
     image: redis:7.0.5-alpine
     hostname: redis
 
-  сonsumer:
-    image: registry.slurm.io/rabbitmq/consumer:main
-    restart: always
-    environment:
-      TO_USERNAME: "rmuser"
-      TO_PASSWORD: "rmpassword"
-      TO_HOSTNAME: "rabbitmq"
-      TO_PORT: "5672"
-      FAIL: "false"
-      SLEEP: "250"
-      FROM_QUEUE: "inbox"
-      FROM_EXCHANGE: "in"
-      FROM_ROUTINGKEY: "gen"
-      FROM_PASSIVE: "false"
-      PREFETCH: "1"
+#  сonsumer:
+#    image: registry.slurm.io/rabbitmq/consumer:main
+#    restart: always
+#    environment:
+#      TO_USERNAME: "rmuser"
+#      TO_PASSWORD: "rmpassword"
+#      TO_HOSTNAME: "rabbitmq"
+#      TO_PORT: "5672"
+#      FAIL: "false"
+#      SLEEP: "250"
+#      FROM_QUEUE: "inbox"
+#      FROM_EXCHANGE: "in"
+#      FROM_ROUTINGKEY: "gen"
+#      FROM_PASSIVE: "false"
+#      PREFETCH: "1"
 
   rabbitmq:
     image: rabbitmq:3.10.7-management
